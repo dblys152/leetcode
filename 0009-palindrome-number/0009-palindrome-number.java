@@ -1,12 +1,13 @@
 class Solution {
     public boolean isPalindrome(int x) {
+        if (x < 0) {
+            return false;
+        }
+        
         String xStr = String.valueOf(x);
         int xStrLength = xStr.length();
         if (xStrLength == 1) {
             return true;
-        }
-        if (xStr.charAt(0) == '-') {
-            return false;
         }
 
         int loopLength = xStrLength / 2;
