@@ -9,8 +9,9 @@ class Solution {
             return false;
         }
 
-        for(int i = 0; i < xStrLength / 2; i++) {
-            if (xStr.charAt(i) != xStr.charAt(xStrLength - (i+1))) {
+        int loopLength = xStrLength / 2;
+        for(int i = 0; i < loopLength; i++) {
+            if (xStr.charAt(i) != xStr.charAt(xStrLength - i - 1)) {
                 return false;
             }
         }
