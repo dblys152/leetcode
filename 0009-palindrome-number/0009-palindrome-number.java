@@ -7,15 +7,13 @@ class Solution {
             return true;
         }
 
-        String xStr = String.valueOf(x);
-        int xStrLength = xStr.length();
- 
-        int loopLength = xStrLength / 2;
-        for(int i = 0; i < loopLength; i++) {
-            if (xStr.charAt(i) != xStr.charAt(xStrLength - i - 1)) {
-                return false;
-            }
+        int origin = x;
+        int reversed = 0;
+        while(x > 0) {
+            reversed = (reversed * 10) + (x % 10);
+            x /= 10;
         }
-        return true;
+        
+        return origin == reversed;
     }
 }
