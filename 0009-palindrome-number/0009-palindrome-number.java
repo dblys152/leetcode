@@ -3,13 +3,13 @@ class Solution {
         if (x < 0) {
             return false;
         }
-        
-        String xStr = String.valueOf(x);
-        int xStrLength = xStr.length();
-        if (xStrLength == 1) {
+        if (x < 10) {
             return true;
         }
 
+        String xStr = String.valueOf(x);
+        int xStrLength = xStr.length();
+ 
         int loopLength = xStrLength / 2;
         for(int i = 0; i < loopLength; i++) {
             if (xStr.charAt(i) != xStr.charAt(xStrLength - i - 1)) {
